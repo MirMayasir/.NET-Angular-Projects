@@ -1,0 +1,135 @@
+<p>home-page works!</p>
+<script src="script.js"></script>
+
+<script>
+    console.log("hello");
+</script>
+
+<h1>{{content}}</h1>
+<form action="">
+    <input type="text" name="cname" [(ngModel)]="cname">
+    <p>The name is {{cname}}</p>
+    <button>submit</button>
+</form>
+<nav class="navbar">
+    <div class="logo">MyLogo</div>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </button>
+</nav>
+
+<label for="canSave">
+    italic: <input id="canSave" type="checkbox" [(ngModel)]=canSave>
+</label>
+
+<label for="isUnchanged">
+    normal: <input id="isUnchanged" type="checkbox" [(ngModel)]=isUnchanged>
+</label>
+
+<label for="isSpecial">
+    xlarge: <input id="isSpecial" type="checkbox" [(ngModel)]=isSpecial>
+</label>
+
+<button type="button" (click)="setCurrentStyles()">Refresh currentstyle</button>
+<br>
+<div [ngStyle]="currentStyles">
+    This dive should be {{ canSave ? "italic" : "plain"}}
+    {{ isUnchanged ? "normal" : "bold"}} and,
+    {{isSpecial ? "entra large" : "normal size "}} after clicking "Refresh".
+</div>
+<br>
+<br>
+
+
+<hr>
+<h2 id="ngClass">NgClass Binding</h2>
+
+<p>currentClasses is {{currentClasses | json}}</p>
+<div [ngClass]="currentClasses">This div is initially saveable, unchanged, and special.</div>
+<ul>
+    <li>
+        <label for="saveable">saveable</label>
+        <input type="checkbox" [(ngModel)]="canSave" id="saveable">
+    </li>
+    <li>
+        <label for="modified">modified:</label>
+        <input type="checkbox" [value]="!isUnchanged" (change)="isUnchanged=!isUnchanged" id="modified">
+    </li>
+    <li>
+        <label for="special">special: <input type="checkbox" [(ngModel)]="isSpecial" id="special"></label>
+    </li>
+</ul>
+<button type="button" (click)="setCurrentClasses()">Refresh currentClasses</button>
+
+<div [ngClass]="currentClasses">
+    This div should be {{ canSave ? "": "not"}} saveable,
+    {{ isUnchanged ? "unchanged" : "modified" }} and
+    {{ isSpecial ? "": "not"}} special after clicking "Refresh".</div>
+<br><br>
+
+<div>
+    <label for="flag">
+        flag: <input id="flag" type="checkbox" [(ngModel)]=flag>
+    </label>
+</div>
+
+<div *ngIf = "flag">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quis soluta cupiditate facilis ut delectus.
+        Similique, aspernatur eum, dolor aliquam praesentium aliquid quo libero perspiciatis incidunt, ducimus tempore
+        odio hic?</p>
+</div>
+
+<div class="gallery">
+    <div class="gallery-item">
+        <img src="/assets/Images/image2.jpeg" alt="Image 1">
+    </div>
+    <div class="gallery-item">
+        <img src="/assets/Images/img1.jpeg" alt="Image 2">
+    </div>
+    <div class="gallery-item">
+        <img src="/assets/Images/image2.jpeg" alt="Image 3">
+    </div>
+    <div class="gallery-item">
+        <img src="/assets/Images/image2.jpeg" alt="Image 4">
+    </div>
+    <div class="gallery-item">
+        <img src="/assets/Images/image2.jpeg" alt="Image 5">
+    </div>
+    <div class="gallery-item">
+        <img src="/assets/Images/image2.jpeg" alt="Image 6">
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>About Us</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac arcu non elit cursus elementum.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <p>Email: contact@example.com</p>
+            <p>Phone: +123 456 7890</p>
+        </div>
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+            <router-outlet></router-outlet>
+            <ul class="social-links">
+                <li><a routerLink="/emplist">YouTube</a></li>
+                <li><a routerLink="/emplist">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Your Company. All rights reserved.</p>
+    </div>
+</footer>

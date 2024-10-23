@@ -1,0 +1,22 @@
+<div class="destination-section">
+    <h2>India</h2>
+    <div class="card-grid">
+      <div class="card" *ngFor="let destination of indiaDestinations">
+        <img [src]="destination.imageUrl" alt="{{destination.title}}">
+        <div class="card-content">
+          <h3>{{ destination.title }}</h3>
+        </div>
+      </div>
+    </div>
+  
+    <h2>International</h2>
+    <div class="card-grid">
+      <div class="card" *ngFor="let destination of internationalDestinations">
+        <img [src]="destination.imageUrl" alt="{{destination.title}}">
+        <div class="card-content">
+          <h3>{{ destination.title }}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,35 @@
+<br><br>
+<div class="container">
+    <div class="offer-banner">
+      <div class="offer-text">
+        <h2>Full Refund*</h2>
+        <p>Due to Medical Reasons</p>
+        <ul>
+          <li>Presenting you an extraordinary offer in these unfavorable circumstances.</li>
+          <li>Get a full refund on a domestic ticket in case you cancel it due to medical sickness.</li>
+          <li>The Best Part - There are ZERO extra charges for this service.</li>
+        </ul>
+      </div>
+      <div class="offer-action">
+        <button [routerLink]="['/covid-refund']">Claim for COVID REFUND here →
+            <img src="https://www.easemytrip.com/images/desk-img/covid-refund.png" alt="">
+        </button>
+      </div>
+    </div>
+  
+    <div class="top-flight-routes">
+      <h2>✈️ Top Flight Routes</h2>
+      <br>
+      <div class="routes-grid">
+        <div class="route" *ngFor="let route of routes">
+          <img [src]="route.image" alt="{{route.from}} to {{route.to}}">
+          <div class="route-info">
+            <h3>{{route.from}} → {{route.to}}</h3>
+            <a href="/bookings">{{route.code}}</a>
+            <br><br><br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

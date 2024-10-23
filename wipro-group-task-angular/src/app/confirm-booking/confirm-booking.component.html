@@ -1,0 +1,145 @@
+<!-- <p>confirm-booking works!</p>
+<form #updateform="ngForm" (submit)="save()">
+    <div>
+      <label for="flightId" >ID:</label>
+      <span [(ngModel)]="booking.id">{{ fa.bookingId }}</span>
+    </div>
+
+    <div>
+      <label for="customerName " >Customer Name:</label>
+      <input type="text" id="customerName" name="customerName"[(ngModel)]="booking.customerName"  required>
+    </div>
+
+    <div>
+      <label for="flightFrom" >Flight From:</label>
+      <span [(ngModel)]="booking.flightFrom">{{ fa.flightFrom }}</span>
+    </div>
+
+    <div>
+      <label for="flightTo">Flight To:</label>
+      <span [(ngModel)]="booking.flightTo">{{ fa.flightTo }}</span>
+    </div>
+
+    <div>
+      <label for="departureDate" >Departure Date:</label>
+      <span [(ngModel)]="booking.departureDate">{{ fa.departureDate | date: 'yyyy-MM-dd' }}</span>
+    </div>
+
+    <div>
+      <label for="arrivalDate">Arrival Date:</label>
+      <span [(ngModel)]="booking.arrivalDate">{{ fa.returnDate | date: 'yyyy-MM-dd' }}</span>
+    </div>
+
+    <div>
+      <label for="flightClass">Class:</label>
+      <span [(ngModel)]="booking.flightClass" >{{ fa.flightClass }}</span>
+    </div>
+
+    <div>
+      <label for="price">Price:</label>
+      <span [(ngModel)]="booking.price">{{ fa.price | currency }}</span>
+    </div>
+    <div>
+      <label for="price" >Booking Date:</label>
+      <span [(ngModel)]="booking.price">{{ fa.price | currency }}</span>
+    </div>
+
+    <div>
+      <button type="submit">Confirm</button>
+    </div>
+</form> -->
+
+<!-- <p>confirm-booking works!</p>
+<form #updateform="ngForm">
+    <div>
+      <label for="flightId">Flight ID:</label>
+      <input type="text" id="flightId" name="flightId" [(ngModel)]="fa.bookingId"  required >
+    </div>
+
+    <div>
+        <label for="customerName">Customer Name:</label>
+        <input type="text" id="flightId" name="flightId" [(ngModel)]="booking.customerName" required >
+      </div>
+  
+    <div>
+      <label for="flightFrom">Flight From:</label>
+      <input type="text" id="flightFrom" name="flightFrom" [(ngModel)]="fa.flightFrom"  readonly>
+    </div>
+  
+    <div>
+      <label for="flightTo">Flight To:</label>
+      <input type="text" id="flightTo" name="flightTo" [(ngModel)]="fa.flightTo"  required readonly>
+    </div>
+  
+    <div>
+      <label for="departureDate">Departure Date:</label>
+      <input type="date" id="departureDate" name="departureDate" [(ngModel)]="fa.departureDate"  required readonly>
+    </div>
+  
+    <div>
+      <label for="arrivalDate">Arrival Date:</label>
+      <input type="date" id="arrivalDate" name="arrivalDate" [(ngModel)]="fa.returnDate "  required readonly>
+    </div>
+  
+    <div>
+      <label for="flightClass">Class:</label>
+      <input type="text" name="flightClass" id="flightClass" [(ngModel)]="fa.flightClass" required="" >
+    </div>
+
+    <div>
+      <label for="flightClass">Price</label>
+      <input type="text" name="flightClass" id="flightClass" [(ngModel)]="fa.price" required=""  readonly>
+    </div>
+  
+    <div>
+      <button type="submit">Submit</button>
+    </div>
+  </form> -->
+
+  <p>confirm-booking works!</p>
+<form #updateform="ngForm" (ngSubmit)="saveData()">
+    <div>
+      <label for="flightId">Flight ID:</label>
+      <input type="text" id="flightId" name="flightId"  [(ngModel)]="fa.bookingId"  required readonly>
+
+    </div>
+
+    <div>
+        <label for="customerName">Customer Name:</label>
+        <input type="text" id="flightId" name="customerName" [(ngModel)]="booking.customerName" required>
+      </div>
+  
+    <div>
+      <label for="flightFrom">Flight From:</label>
+      <input type="text" id="flightFrom" name="flightFrom" [(ngModel)]="fa.flightFrom" required>
+    </div>
+  
+    <div>
+      <label for="flightTo">Flight To:</label>
+      <input type="text" id="flightTo" name="flightTo" [(ngModel)]="fa.flightTo" required readonly>
+    </div>
+  
+    <div>
+      <label for="departureDate">Departure Date:</label>
+      <input type="date" id="departureDate" name="departureDate" [(ngModel)]="fa.departureDate" required readonly>
+    </div>
+  
+    <div>
+      <label for="arrivalDate">Arrival Date:</label>
+      <input type="date" id="arrivalDate" name="arrivalDate" [(ngModel)]="fa.returnDate" required readonly>
+    </div>
+  
+    <div>
+      <label for="flightClass">Class:</label>
+      <input type="text" name="flightClass" id="flightClass" [(ngModel)]="fa.flightClass" readonly >
+    </div>
+
+    <div>
+      <label for="flightClass">Price:</label>
+      <input type="text" name="flightPrice" id="flightClass" [(ngModel)]="fa.price" readonly>
+    </div>
+  
+    <div>
+      <button type="submit">Confirm</button>
+    </div>
+  </form>

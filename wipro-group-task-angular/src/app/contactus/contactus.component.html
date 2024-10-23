@@ -1,0 +1,42 @@
+<header>
+    <h1>Contact Us</h1>
+</header>
+
+<main>
+    <section class="contact-form-section">
+        <h2>Get in Touch</h2>
+        <form class="contact-form" #addform="ngForm" (submit)="addMsg()">
+            <div class="input-box">
+                <label for="name">Full Name</label>
+                <input id="name" type="text" name="fullName" [(ngModel)] = "cont.fullName" required>
+            </div>
+            <div class="input-box">
+                <label for="email">Email Address</label>
+                <input id="email" type="email" name="email" [(ngModel)] = "cont.email" required>
+            </div>
+            <div class="input-box">
+                <label for="phone">Phone Number</label>
+                <input id="phone" type="tel" name="contact" [(ngModel)] = "cont.contact">
+            </div>
+            <div class="input-box">
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="5" [(ngModel)] = "cont.message" required></textarea>
+            </div>
+            <button type="submit" class="submit-button" [disabled]="!addform.valid">Send Message</button>
+        </form>
+    </section>
+
+    <section class="contact-info-section">
+        <h2>Our Contact Information</h2>
+        <p>Feel free to reach out to us through any of the following methods:</p>
+        <div class="contact-info">
+            <p><strong>Email:</strong> supportgmail.com</p>
+            <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+            <p><strong>Address:</strong> 123 Airline St, Suite 100, City, Country</p>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Airline. All rights reserved.</p>
+</footer>

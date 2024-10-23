@@ -1,0 +1,26 @@
+<!-- travel-blogs.component.html -->
+<div class="blogs-container">
+    <h2>Enjoy Fresh Travel Blogs</h2>
+  
+    <div class="blogs">
+      <div class="blog-card" *ngFor="let blog of blogs">
+        <div class="tag">{{ blog.category }}</div>
+        <h3>{{ blog.title }}</h3>
+        <button routerLink="/connectingflight">Read More <span>&rarr;</span></button>
+      </div>
+    </div>
+  <br>
+    <button [routerLink]="['/hero-section']" target="_blank" class="view-all-btn">View All</button>
+  
+    <div class="why-book-us">
+      <h2>Why book with us?</h2>
+      <div class="reasons">
+        <div class="reason-card" *ngFor="let reason of reasons">
+          <img [src]="reason.icon" alt="{{ reason.title }} icon">
+          <h3>{{ reason.title }}</h3>
+          <p>{{ reason.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  

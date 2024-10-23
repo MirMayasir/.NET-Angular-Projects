@@ -1,0 +1,35 @@
+<div class="book-appointment-container">
+    <h2>Book an Appointment</h2>
+  
+    <form  #addform="ngForm" (submit)="register()" >
+      <!-- Select Doctor -->
+      <div class="form-group">
+        <label for="patient">patient name</label>
+        <input type="text" id="patient" [(ngModel)]="book.patientName " name="patient">
+        
+      </div>
+  
+      <!-- Appointment Date -->
+      <div class="form-group">
+        <label for="date">Appointment Date</label>
+        <input type="date" id="date" class="form-control" [(ngModel)]="book.appointmentDate" required  name="date" />
+        
+      </div>
+  
+      <!-- Appointment Time -->
+      <div class="form-group">
+        <label for="time">Appointment Time</label>
+        <input type="time" id="time" class="form-control" [(ngModel)]="book.appointmentTime" required  name="time"/>
+        
+      </div>
+  
+      <!-- Reason for Visit -->
+      <div class="form-group">
+        <label for="reason">Reason for Visit</label>
+        <textarea id="reason" class="form-control" required [(ngModel)]="book.resaon"  name="reason" rows="4"  placeholder="Describe your symptoms or reason for the visit"></textarea>
+      </div>
+  
+      <button type="submit" class="btn-primary" >Book Appointment</button>
+    </form>
+  </div>
+  

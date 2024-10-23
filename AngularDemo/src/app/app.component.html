@@ -1,0 +1,25 @@
+<div>
+    <h1>{{title}}</h1>
+    <!-- <app-home-page></app-home-page> -->
+
+    <div *ngIf="local.getItem('token')==null">
+
+        <a class="nav-link" routerLink="login">Login</a>
+    
+        <a class="nav-link" routerLink="signup">Signup</a>
+    
+    </div>
+    <a class="nav-link" routerLink="">Hello {{local.getItem("Username")}}</a>
+
+    <a class="nav-link" (click)="logout()">Logout</a>
+    <a routerLink="home" class="link">Home</a>
+    <a routerLink="emplist" class="link">Emplist</a>
+    <a routerLink="register" class="link">Register</a>
+    <a routerLink="Customers" class="link">Customers</a>
+    <a routerLink="addCustomer" class="link">AddCustomers</a>
+    <a routerLink="deleteCustomer" class="link">DeletCustomer</a>
+    <a routerLink="fliter-customer" class="link">Filter</a>
+    <a routerLink="signup" class="link">Signup</a>
+
+    <router-outlet></router-outlet>
+</div>

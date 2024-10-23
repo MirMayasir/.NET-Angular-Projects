@@ -1,0 +1,27 @@
+.latest-blogs {
+    margin-top: 20px;
+  }
+  
+  .blog-card {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .blog-image {
+    width: 200px;
+    height: 120px;
+    margin-right: 20px;
+  }
+  
+  .blog-content {
+    max-width: 600px;
+  }
+  
+  h3 {
+    margin: 0;
+  }
+  
+  p {
+    margin: 5px 0;
+  }
+  

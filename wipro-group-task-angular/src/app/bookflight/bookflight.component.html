@@ -1,0 +1,75 @@
+<div class="form-component">
+<form #addForm="ngForm" (ngSubmit)="book()">
+  <form class="search-container">
+      <div class="input-box">
+          <label class="label">FROM</label>
+          <div>
+              <input class="input" [(ngModel)]="Cfrom" [(ngModel)]="fd.flightFrom"  name="flightFrom" required>
+              <span class="input-info">[DEL] Indira Gandhi International Airport</span>
+          </div>
+      </div>
+
+      <div class="input-box">
+          <label class="label">TO</label>
+          <div>
+              <input class="input" [(ngModel)]="Cto" [(ngModel)]="fd.flightTo" name="flightTo" required>
+              <span class="input-info">[BOM] Chhatrapati Shivaji International A...</span>
+          </div>
+      </div>
+
+      <div class="input-box">
+        <label class="label">DEPARTURE DATE</label>
+        <div>
+            <input type="date" class="input" [(ngModel)]="fd.departure" name="departure" (change)="onDepartureDateChange()" [min]="minDepartureDate" required>
+        </div>
+      </div>
+      
+      <div class="input-box">
+        <label class="label">RETURN DATE</label>
+        <div>
+            <input type="date" class="input" [(ngModel)]="fd.return" name="return" [min]="minReturnDate" required>
+        </div>
+      </div>
+      
+    
+    <div class="input-box">
+        <label class="label">CLASS</label>
+        <div>
+            <select class="input" [(ngModel)]="fd.flightclass" name="flightclass" required>
+                <option value="Economy">Economy</option>
+                <option value="Business">Business</option>
+                <option value="First">First</option>
+            </select>
+        </div>
+
+    </div>
+</form>
+
+
+<div>
+<table class="table">
+    <thead>
+        <th>FlightID</th>
+        <th>Flight From</th>
+        <th>Flight To</th>
+        <th>Departure date</th>
+        <th>Arrival Date</th>
+        <th>Class</th>
+        <th>Price</th>
+    </thead>
+    <tr *ngFor="let i of flightsAvail | Fcity:Cfrom | Dcity:Cto">
+        <td>{{i.bookingId}}</td>
+        <td>{{ i.flightFrom }}</td>
+        <td>{{ i.flightTo }}</td>
+        <td>{{ i.departureDate }}</td>
+        <td>{{ i.returnDate }}</td>
+        <td>{{ i.flightClass }}</td>
+        <td>{{i.price}}</td>
+        <td><a [routerLink]="['/confirmbookings', i.bookingId]">Book</a></td>
+
+    </tr>
+</table>
+</div>
+
+
+

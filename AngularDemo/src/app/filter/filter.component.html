@@ -1,0 +1,19 @@
+<p>filter works!</p>
+Enter the city: <input type="text" [(ngModel)]="city"/><br/><br/>
+Enter the cid filter: <input type="number" [(ngModel)]="cid"/><br/><br/>
+
+<table>
+    
+    <thead>
+        <th>Cid</th>
+        <th>Cname</th>
+        <th>City</th>
+    </thead>
+
+    <tr *ngFor="let i of customer|CustCity:city|CustID:cid">
+        <td>{{i.cid}}</td>
+        <td>{{i.cname}}</td>
+        <td>{{i.city}}</td>
+    </tr>
+
+</table>

@@ -1,0 +1,13 @@
+<br><br>
+<div class="latest-blogs">
+    <h2>Latest Blog</h2>
+    <div class="blog-card" *ngFor="let blog of latestBlogs">
+      <img [src]="blog.imageUrl" alt="{{ blog.title }}" class="blog-image">
+      <div class="blog-content">
+        <h3>{{ blog.title }}</h3>
+        <p>{{ blog.description }}</p>
+        <p>By {{ blog.author }} - {{ blog.date }}</p>
+      </div>
+    </div>
+  </div>
+  

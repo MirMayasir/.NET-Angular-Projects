@@ -1,0 +1,30 @@
+<p>emp-list works!</p>
+<h1>Employes table</h1>
+<label for="flag">
+    Do u want to see emp data 
+    <input type="checkbox" name="flag" id="flag" [(ngModel)] = flag>
+</label>
+<div *ngIf="flag">
+    {{emps | json}}
+    <table class="table" >
+        <thead>
+            <th>Eid</th>
+            <th>Ename</th>
+            <th>Salary</th>
+            <th>doj</th>
+            <th>Dept</th>
+            <th>Skill</th>
+        </thead>
+        <tr *ngFor="let i of emps">
+            <td>{{i.eid}}</td>
+            <td>{{i.ename}}</td>
+            <td>{{i.salary | currency}}</td>
+            <td>{{i.doj| date}}</td>
+            <td>{{i.deptid.dname}}</td>
+            <td *ngFor = "let item of i.skills">
+                {{item.skillname}}
+            </td>
+        </tr>
+    </table>
+
+</div>

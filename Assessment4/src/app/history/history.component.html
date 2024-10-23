@@ -1,0 +1,47 @@
+<!-- <p>history works!</p>
+
+<table>
+    <thead>
+        <th>Appointid</th>
+        <th>Patient name</th>
+        <th>Appoint Date</th>
+        <th>Appointment Time</th>
+        <th>Reason</th>
+    </thead>
+    <tr *ngFor="let i of book">
+        <td>{{i.appointmentId}}</td>
+        <td>{{i.patientName}}</td>
+        <td>{{i.appointmentDate}}</td>
+        <td>{{i.appointmentTime}}</td>
+        <td>{{i.resaon}}</td>
+    </tr>
+</table> -->
+
+<p>history works!</p>
+
+<div class="search-container">
+  <input type="text" [(ngModel)]="book.appointmentId" placeholder="Enter Appointment ID" />
+  <button (click)="searchAppointment()">Search</button>
+</div>
+
+<table *ngIf="book.length > 0">
+  <thead>
+    <tr>
+      <th>Appointid</th>
+      <th>Patient name</th>
+      <th>Appoint Date</th>
+      <th>Appointment Time</th>
+      <th>Reason</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let i of book">
+      <td>{{i.appointmentId}}</td>
+      <td>{{i.patientName}}</td>
+      <td>{{i.appointmentDate}}</td>
+      <td>{{i.appointmentTime}}</td>
+      <td>{{i.reason}}</td>
+    </tr>
+  </tbody>
+</table>
+

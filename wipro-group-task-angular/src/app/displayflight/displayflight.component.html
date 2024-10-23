@@ -1,0 +1,19 @@
+<div class="search-box">
+    <form action="#" method="get">
+        <input type="number" placeholder="Enter Flight number..." name="searchNumber" [(ngModel)]="bookId" required>
+        <input (click)="getDetails()" type="submit" value="Search">
+    </form>
+</div>
+
+<div *ngIf="bookings" class="flight-details">
+    <h3>Flight Details</h3>
+    <p><span>ID:</span> {{ bookings.bookingId }}</p>
+    <p><span>Name:</span> {{ bookings.customerName }}</p>
+    <p><span>Flight From:</span> {{ bookings.flightFrom }}</p>
+    <p><span>Flight To:</span> {{ bookings.flightTo }}</p>
+    <p><span>Departure Date:</span> {{ bookings.departureDate }}</p>
+    <p><span>Arrival Date:</span> {{ bookings.arrivalDate }}</p>
+    <p><span>Booking Price:</span> {{ bookings.price }}</p>
+    <p><span>Booking Time:</span> {{ bookings.createdAt }}</p>
+  </div>
+  

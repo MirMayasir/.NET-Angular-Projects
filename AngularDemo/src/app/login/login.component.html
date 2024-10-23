@@ -1,0 +1,22 @@
+<div class="container-fluid">
+    <div *ngIf="errormsg!=''" class="alert alert-danger" style="text-align:center">{{errormsg}}</div>
+    <div class="login-content">
+        <form [formGroup]="userform" (ngSubmit)="login()">
+            <div>
+                <label for="username">UserName</label>
+                <input id="username" type="text" placeholder="Enter Username" formControlName="username" required/>
+
+        </div>
+        <div>
+            <label for="password"> Password: </label> 
+            <input type="password" id="password" placeholder="Enter Password" formControlName="password"/>
+            
+        </div>
+        
+             <!-- [disabled]="userform.invalid"  -->
+        <div>
+            <button type="submit"  class="btn btn-primary"> Sign In </button>
+        </div>
+        </form>
+    </div>
+</div>

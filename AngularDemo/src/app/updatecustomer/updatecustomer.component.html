@@ -1,0 +1,27 @@
+<p>updatecustomer works!</p>
+<p>customerupdate works!</p>
+
+<div>
+
+    <form #updateform="ngForm" (submit)="Save()"> 
+        <div>
+            Customer ID: 
+            <input type="number" name="cid" [(ngModel)]="c.cid" required/>
+        </div>
+        <div>
+            Customer Name: 
+            <input type="text" name="cname" [(ngModel)]="c.cname" required/>
+        </div>
+        
+        <div>
+            City: 
+            <input type="text" name="city" [(ngModel)]="c.city" required/>
+        </div>
+        
+       
+        <div>
+            <input type="submit" value="Save" [disabled]="!updateform.valid"/>
+        </div>
+
+    </form>
+</div>

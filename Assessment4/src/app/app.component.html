@@ -1,0 +1,15 @@
+
+<div *ngIf="local.getItem('token')==null">
+
+    <a class="nav-link" routerLink="login">Login</a>
+
+    <a class="nav-link" routerLink="signin">Signup</a>
+
+</div>
+
+<div *ngIf="local.getItem('token')!=null">
+    <a class="nav-link" routerLink="">Hello {{local.getItem("Username")}}</a>
+    <a class="nav-link" (click)="logout()">Logout</a>
+</div>
+
+<router-outlet></router-outlet>

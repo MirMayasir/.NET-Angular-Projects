@@ -1,0 +1,19 @@
+<p>customer-list works!</p>
+<div *ngIf="flag">
+    <!-- {{emps|json}}  -->
+   <table class="table">
+     <thead>
+       <th> Cid </th>
+       <th> Cname </th>
+        <th>City</th>
+         
+     </thead>
+     
+     <tr *ngFor="let i of customers">
+       <td> {{i.cid}}</td>
+       <td> {{i.cname}}</td>
+       <td>{{i.city}}</td>
+       <td><a [routerLink]="['/customerupdate', i.cid]">Edit</a></td>
+     </tr>
+   </table>
+ </div>

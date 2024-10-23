@@ -1,0 +1,80 @@
+.container {
+    width: 80%;
+    margin: auto;
+  }
+  
+  .offer-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eef5fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .offer-text h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #2e77d0;
+  }
+  
+  .offer-text p {
+    margin: 5px 0;
+    color: #2e77d0;
+    font-weight: bold;
+  }
+  
+  .offer-text ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .offer-text ul li {
+    margin-bottom: 5px;
+  }
+  
+  .offer-action button {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .top-flight-routes {
+    text-align: center;
+  }
+  
+  .routes-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .route {
+    width: 150px;
+    text-align: center;
+  }
+  
+  .route img {
+    width: 60%;
+    border-radius: 5px;
+  }
+  
+  .route-info {
+    margin-top: 10px;
+  }
+  
+  .route-info h3 {
+    margin: 5px 0;
+    font-size: 16px;
+  }
+  
+  .route-info a {
+    color: #2e77d0;
+    text-decoration: none;
+  }
+  

@@ -1,0 +1,22 @@
+<p>add-customer works!</p>
+<div class="form-container">
+    <h2>Add Customer</h2>
+    <form id="customerForm" #addform="ngForm" (submit)= "addCust()" >
+        <div class="form-group">
+            <label for="cid">Customer ID:</label>
+            <input type="number" id="cid" name="cid" [(ngModel)] = "customer.cid" required>
+        </div>
+        <div class="form-group">
+            <label for="cname">Customer Name:</label>
+            <input type="text" id="cname" name="cname" [(ngModel)] = "customer.cname" required>
+        </div>
+        <div class="form-group">
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" [(ngModel)] = "customer.city" required>
+        </div>
+        <div class="form-group">
+            <button type="submit">Add Customer</button>
+        </div>
+    </form>
+</div>
+
